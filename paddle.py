@@ -2,7 +2,7 @@ import pygame
 BLACK = (0,0,0)
 
 class Paddle(pygame.sprite.Sprite):
-    # Essa classe represente o paddle, derivando da classe Sprite
+    # Essa classe representa o paddle, derivando da classe Sprite
 
     def __init__(self, color, width, height):
         # Chama o construtor da classe pai (Sprite)
@@ -14,8 +14,8 @@ class Paddle(pygame.sprite.Sprite):
         self.image.fill(BLACK)
         self.image.set_colorkey(BLACK)
 
-        # Draw the paddle (a rectangle!)
+        # Denenha o paddle, que nada mais é do que um retangulo
         pygame.draw.rect(self.image, color, [0, 0, width, height])
 
-        # Fetch the rectangle object that has the dimensions of the image.
+        # Busque o objeto retangular que tenha as dimensões da imagem.
         self.rect = self.image.get_rect()
